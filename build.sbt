@@ -1,6 +1,6 @@
 name := "ScalaUtils"
 
-// logograb utils project
+// kirbydee utils project
 lazy val utils = (project in file("."))
         .settings(Commons.settings: _*)
         .settings(

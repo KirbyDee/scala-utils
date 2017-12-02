@@ -95,7 +95,7 @@ object AsIs {
     object Implicits extends Implicits
 }
 
-@implicitNotFound(msg = "\nNo matching implicit AsIs found of Type [${T}].\nSee default implementations under com.logograb.utils.AsIs.Implicits\n")
+@implicitNotFound(msg = "\nNo matching implicit AsIs found of Type [${T}].\nSee default implementations under com.kirbydee.utils.AsIs.Implicits\n")
 trait AsIs[T] {
 
     /**

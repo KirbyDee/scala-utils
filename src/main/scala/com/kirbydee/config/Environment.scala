@@ -18,18 +18,7 @@ abstract class Environment(val name: String) {
 
     override def toString: String =
         this.name
-
-    def website: String
 }
-case object Production  extends Environment("production") {
-    override def website: String =
-        "https://www.logograb.com"
-}
-case object Development extends Environment("development") {
-    override def website: String =
-        "https://dev.logograb.com"
-}
-case object Localhost   extends Environment("localhost") {
-    override def website: String =
-        "localhost:9002"
-}
+case object Production  extends Environment("production")
+case object Development extends Environment("development")
+case object Localhost   extends Environment("localhost")

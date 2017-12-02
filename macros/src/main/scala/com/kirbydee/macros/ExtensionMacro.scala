@@ -13,15 +13,15 @@ object ExtensionMacro {
       * Gets the possible Extension from a String.
       *
       * @param extension The string extension
-      * @return The possible Extension in com.logograb.utils.Extension
+      * @return The possible Extension in com.kirbydee.utils.Extension
       */
     def from(extension: String): Option[Extension] = macro fromImpl
     def fromImpl(c: blackbox.Context)(extension: c.Expr[String]): c.Expr[Option[Extension]] = {
         import c.universe._
 
-        // get all different extensions in "com.logograb.utils" and parse them to their name
+        // get all different extensions in "com.kirbydee.utils" and parse them to their name
         import scala.collection.JavaConversions._
-        val reflect = new Reflections("com.logograb.utils")
+        val reflect = new Reflections("com.kirbydee.utils")
         val allExtensions = reflect.getSubTypesOf(classOf[Extension]).toList.map(_.getSimpleName.replace("$", ""))
 
         // create match cases for each extension

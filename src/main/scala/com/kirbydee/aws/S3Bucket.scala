@@ -16,7 +16,7 @@ import scala.language.{postfixOps, reflectiveCalls}
 object S3Bucket {
 
     // The extension of a s3 bucket
-    val s3BucketExtension: String = "logograb.com"
+    val s3BucketExtension: String = "kirbydee.com"
 
     /**
       * Implicit Classes, Conversions etc.

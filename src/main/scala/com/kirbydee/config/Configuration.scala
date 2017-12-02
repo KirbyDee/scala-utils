@@ -19,20 +19,20 @@ class Configuration {
     private val props = sys.props
 
     // aws configurations
-    val aws: AWSConfig = config hasPath "logograb" match {
+    val aws: AWSConfig = config hasPath "kirbydee" match {
         case false =>
             defaultAWSConfig
 
         case true  =>
             // root
-            val logograb = config getConfig "logograb"
-            logograb hasPath "aws" match {
+            val kirbydee = config getConfig "kirbydee"
+            kirbydee hasPath "aws" match {
                 case false =>
                     defaultAWSConfig
 
                 case true  =>
                     // aws configurations
-                    val aws       = logograb getConfig "aws"
+                    val aws       = kirbydee getConfig "aws"
                     val awsKey    = (props get "awsKey")    | (aws getString "key")
                     val awsSecret = (props get "awsSecret") | (aws getString "secret")
                     val awsRegion = (props get "awsRegion") | (aws getString "region")
@@ -44,20 +44,20 @@ class Configuration {
     }
 
     // twitter configurations
-    val twitter: TwitterConfig = config hasPath "logograb" match {
+    val twitter: TwitterConfig = config hasPath "kirbydee" match {
         case false =>
             defaultTwitterConfig
 
         case true  =>
             // root
-            val logograb = config getConfig "logograb"
-            logograb hasPath "twitter" match {
+            val kirbydee = config getConfig "kirbydee"
+            kirbydee hasPath "twitter" match {
                 case false =>
                     defaultTwitterConfig
 
                 case true  =>
                     // twitter configurations
-                    val twitter            = logograb getConfig "twitter"
+                    val twitter            = kirbydee getConfig "twitter"
                     val twitterConsumer    = twitter getConfig "consumer"
                     val consumerKey        = (props get "twitterConsumerKey")    | (twitterConsumer getString "key")
                     val consumerSecret     = (props get "twitterConsumerSecret") | (twitterConsumer getString "secret")

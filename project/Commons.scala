@@ -4,7 +4,7 @@ import sbt._
 object Commons {
     val settings: Seq[Def.Setting[_]] = Seq(
         scalaVersion := "2.11.8",
-        organization := "com.logograb",
+        organization := "com.kirbydee",
         version := "1.0",
         resolvers ++= Seq(
             "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",

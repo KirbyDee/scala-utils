@@ -29,7 +29,7 @@ object ToString {
     object Implicits extends Implicits
 }
 
-@implicitNotFound(msg = "\nNo matching implicit ToString found of Type [${T}].\nSee default implementations under com.logograb.utils.ToString.Implicits\n")
+@implicitNotFound(msg = "\nNo matching implicit ToString found of Type [${T}].\nSee default implementations under com.kirbydee.utils.ToString.Implicits\n")
 trait ToString[T] {
 
     /**

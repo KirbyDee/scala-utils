@@ -1,7 +1,7 @@
 name := "macros"
 version := "1.0"
 scalaVersion := "2.11.8"
-organization := "com.logograb"
+organization := "com.kirbydee"
 
 resolvers ++= Seq(
     "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
